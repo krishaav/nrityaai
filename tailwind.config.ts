@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Traditional colors
+				tradition: {
+					gold: '#D4AF37',
+					maroon: '#800000',
+					terracotta: '#CD5C5C',
+					beige: '#F5F5DC',
+					darkbrown: '#654321',
+					orange: '#FF7F50',
 				}
 			},
 			borderRadius: {
@@ -84,11 +94,36 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'dance-move': {
+					'0%, 100%': {
+						transform: 'translateY(0)'
+					},
+					'50%': {
+						transform: 'translateY(-5px)'
+					}
+				},
+				'gentle-pulse': {
+					'0%, 100%': {
+						opacity: '1'
+					},
+					'50%': {
+						opacity: '0.8'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'dance-move': 'dance-move 3s ease-in-out infinite',
+				'gentle-pulse': 'gentle-pulse 4s ease-in-out infinite'
+			},
+			backgroundImage: {
+				'tradition-gradient': 'linear-gradient(to right, #CD5C5C, #D4AF37)',
+				'hero-pattern': 'linear-gradient(rgba(245, 245, 220, 0.8), rgba(245, 245, 220, 0.8)), url("/dance-pattern.svg")'
+			},
+			fontFamily: {
+				'dance': ['"Cormorant Garamond"', 'serif']
 			}
 		}
 	},
